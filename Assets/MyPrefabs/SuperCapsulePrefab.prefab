@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 343244987410089668}
   - component: {fileID: 2600918821135003435}
   m_Layer: 0
-  m_Name: SuperCapsule
+  m_Name: SuperCapsulePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141,3 +141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455ae52dcbb2e0f44ae61b5e7dc55272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myType: 0
+  choosePanel: {fileID: 0}
+  typeChoosen: 0

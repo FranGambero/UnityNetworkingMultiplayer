@@ -5,7 +5,7 @@ using UnityEngine.Networking;
 
 namespace NetworkObjects {
     public class PlayerConnection : NetworkBehaviour {
-        public TicTacToeController objectPrefab;
+        public PlayerController objectPrefab;
 
         private void Start() {
             Debug.Log("Llego al Start de PlayerConnection");
@@ -18,7 +18,7 @@ namespace NetworkObjects {
         private void CmdSpawnTeam() {
             Debug.Log("Voy a spawnear un coso");
             // Instanciar TankController
-            TicTacToeController tic = Instantiate(objectPrefab);
+            PlayerController tic = Instantiate(objectPrefab);
 
 
             // Hacer llamada al networkserver
