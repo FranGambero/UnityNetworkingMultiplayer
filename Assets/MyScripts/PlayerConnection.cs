@@ -18,11 +18,11 @@ namespace NetworkObjects {
         private void CmdSpawnTeam() {
             Debug.Log("Voy a spawnear un coso");
             // Instanciar TankController
-            PlayerController tic = Instantiate(objectPrefab);
+            PlayerController newPlayer = Instantiate(objectPrefab);
 
 
             // Hacer llamada al networkserver
-            NetworkServer.SpawnWithClientAuthority(tic.gameObject, connectionToClient);
+            NetworkServer.SpawnWithClientAuthority(newPlayer.gameObject, connectionToClient);
         }
     }
 }

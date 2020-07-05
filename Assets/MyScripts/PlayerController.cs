@@ -10,14 +10,22 @@ namespace NetworkObjects {
         public GameObject choosePanel;
         public bool typeChoosen;
 
-        private void Awake() {                    
-            choosePanel.SetActive(true);
+        private void Awake() {
+            Debug.Log("ESTOY VIVX");
+
+            Instantiate(choosePanel, transform.position, transform.rotation);
+
             typeChoosen = false;
         }
 
-        public void SetType(Type type) {        // UwU
+        public void SetGameType(Type type) {
             myType = type;
-            Debug.Log("Tras seleccionarlo: " + myType);
+            Debug.Log("tengo asignado" + myType);
         }
+
+        public bool HasAuthority() {
+            return hasAuthority;
+        }
+        
     }
 }

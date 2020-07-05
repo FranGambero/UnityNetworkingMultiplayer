@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455ae52dcbb2e0f44ae61b5e7dc55272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myType: 0
-  choosePanel: {fileID: 0}
+  myType: 1
+  choosePanel: {fileID: 8028753471779201421, guid: dbdcc6ae2e1194b47bae5f78cf8c4c65,
+    type: 3}
   typeChoosen: 0
