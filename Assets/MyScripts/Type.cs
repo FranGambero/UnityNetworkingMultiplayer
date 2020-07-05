@@ -4,5 +4,5 @@ using UnityEngine;
 
 public enum Type
 {
-    Rock, Paper, Scissors
+    Rock, Paper, Scissors , Undefined
 }

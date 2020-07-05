@@ -11,16 +11,17 @@ namespace NetworkObjects {
         public bool typeChoosen;
 
         private void Awake() {
-            Debug.Log("ESTOY VIVX");
-
+            myType = Type.Undefined;
+            typeChoosen = false;
             Instantiate(choosePanel, transform.position, transform.rotation);
 
-            typeChoosen = false;
+            Debug.Log("ESTOY VIVX");
         }
 
         public void SetGameType(Type type) {
             myType = type;
-            Debug.Log("tengo asignado" + myType);
+            Debug.Log("Tengo asignado " + myType);
+            typeChoosen = true;
         }
 
         public bool HasAuthority() {

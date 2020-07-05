@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7934567029730355618}
   - component: {fileID: 343244987410089668}
   - component: {fileID: 2600918821135003435}
+  - component: {fileID: -7751038448685087119}
   m_Layer: 0
   m_Name: SuperCapsulePrefab
   m_TagString: Untagged
@@ -141,7 +142,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455ae52dcbb2e0f44ae61b5e7dc55272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myType: 1
+  myType: 3
   choosePanel: {fileID: 8028753471779201421, guid: dbdcc6ae2e1194b47bae5f78cf8c4c65,
     type: 3}
-  typeChoosen: 0
+  typeChoosen: 1
+--- !u!114 &-7751038448685087119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7934567029730355619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba3495ca83a4dda499ea32f4cb80a705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

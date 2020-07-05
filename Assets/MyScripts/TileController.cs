@@ -11,6 +11,5 @@ namespace NetworkObjects {
         public void setTypeFromTile() {
             playerController.SetGameType(tileType);
         }
-
     }
 }

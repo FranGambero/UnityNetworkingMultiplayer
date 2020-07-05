@@ -14,23 +14,25 @@ namespace NetworkObjects {
         }
 
         private void Update() {
-            syncGame();
+            SyncGame();
         }
 
-        private void syncGame() {
+        private void SyncGame() {
             if (myPlayer.HasAuthority()) {
                 SendData();
-            }   
-            //else {
-            //    SyncOthersPlayer();
-            //}
+            } else {
+                SyncOthersPlayer();
+            }
         }
         private void SendData() {
+            Debug.Log("SendData fue llamao con tipo: " + myPlayer.myType);
             CmdSendChosenType(myPlayer.myType);
         }
 
         private void SyncOthersPlayer() {
-                // TBD
+            Debug.Log("SyncOthersPlayer fue llamao con tipo: " + myPlayer.myType);
+
+            myPlayer.myType = myLastType;
         }
 
         [Command]
