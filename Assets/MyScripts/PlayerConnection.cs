@@ -1,21 +1,28 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class PlayerConnection : NetworkBehaviour
-{
-    private void Start() {
-        if (isLocalPlayer) {
-            CmdSpawnTeam();
+namespace NetworkObjects {
+    public class PlayerConnection : NetworkBehaviour {
+        public TicTacToeController objectPrefab;
+
+        private void Start() {
+            Debug.Log("Llego al Start de PlayerConnection");
+            if (isLocalPlayer) {
+                CmdSpawnTeam();
+            }
         }
-    }
 
-    [Command]
-    private void CmdSpawnTeam() {
-        // Instanciar TankController
+        [Command]
+        private void CmdSpawnTeam() {
+            Debug.Log("Voy a spawnear un coso");
+            // Instanciar TankController
+            TicTacToeController tic = Instantiate(objectPrefab);
 
-        // Hacer llamada al networkserver
+
+            // Hacer llamada al networkserver
+            NetworkServer.SpawnWithClientAuthority(tic.gameObject, connectionToClient);
+        }
     }
 }
